@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <!-- DaisyUI link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Icon Impoter -->
+    <script src="https://kit.fontawesome.com/b52fa5c686.js" crossorigin="anonymous"></script>
+
+    <style>
+        .btnBg{
+            background-color: #422AD5;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header id="header" class="bg-gray-100">
+        <div class="flex flex-col md:flex-row gap-5 md:gap-0 justify-center md:justify-between w-11/12 mx-auto py-5">
+            <div class="logo flex gap-1 items-center">
+                <h1 class="text-xl font-bold">English</h1>
+                <img src="assets/logo.png" alt="">
+                <h1 class="font-bold text-xl">জানালা</h1>
+            </div>
+
+            <div class="topBtns md:flex gap-3">
+                <div class="btn border-2 border-[#422AD5] text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
+                    onclick="scrollToSection('FAQ')">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <h1>FAQ</h1>
+                </div>
+
+                <div class="btn border-2 border-[#422AD5] text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
+                    onclick="scrollToSection('learnSec')">
+                    <i class="fa-solid fa-book-open"></i>
+                    <h1>Learn</h1>
+                </div>
+
+                <div class="btn border-2 border-[#422AD5] text-[#422AD5] hover:bg-[#422AD5] hover:text-white"
+                    onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <h1>LogOut</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+
+    <section id="hero" class="mb-10 w-11/12 mx-auto flex flex-col-reverse md:flex-row md:justify-between">
+        <div class="flex flex-col gap-7 justify-center md:w-1/2 md:text-left text-center">
+            <h1 class="text-5xl font-bold"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+            <h1 class="text-xl font-bold">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা
+                বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</h1>
+            <div class="flex flex-col items-center md:items-start md:w-1/2 gap-5">
+                <input id="username" class="border-gray-300 py-2 px-3 rounded-lg" type="text" placeholder="Enter Your Name">
+                <input id="pin" class="border-gray-300 py-2 px-3 rounded-lg" type="password" name=""
+                    placeholder="Enter Your 6 Digit Pin">
+                <button class="btn w-36 bg-[#422AD5] text-white rounded-lg" onclick="login()">Get Started</button>
+            </div>
+        </div>
+        <div>
+            <img src="assets/hero-student.png" alt="">
+        </div>
+    </section>
+    <!-- Modal -->
+    <dialog id="wordDetails" class="modal">
+        <div id="Details" class="modal-box">
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <!-- Learn Section -->
+    <section id="learnSec" class="w-11/12 mx-auto py-12 flex flex-col gap-2">
+        <h1 class="text-4xl text-center font-extrabold mb-10"><span class="text-[#00BCFF]">Let's</span> Learn
+            Vocabularies</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-7 gap-5 px-20">
+            <div id="1" class="flex gap-2 btn border-2 border-[#422AD5] text-[#422AD5]" onclick="lesson1(1)">
+                <i class="fa-solid fa-book-open"></i>
+                <h1>Lesson-1</h1>
+            </div>
+            <div id="2" class="flex gap-2 btn border-2 border-[#422AD5] text-[#422AD5]" onclick="lesson1(2)">
+                <i class="fa-solid fa-book-open"></i>
+                <h1>Lesson-2</h1>
+            </div>
+            <div id="3" class="flex gap-2 btn border-2 border-[#422AD5] text-[#422AD5]" onclick="lesson1(3)">
+                <i class="fa-solid fa-book-open"></i>
+                <h1>Lesson-3</h1>
+            </div>
+            <div id="4" class="flex gap-2 btn border-2 border-[#422AD5] text-[#422AD5]" onclick="lesson1(4)">
+                <i class="fa-solid fa-book-open"></i>
+                <h1>Lesson-4</h1>
+            </div>
+            <div id="5" class="flex gap-2 btn border-2 border-[#422AD5] text-[#422AD5]" onclick="lesson1(5)">
+                <i class="fa-solid fa-book-open"></i>
+                <h1>Lesson-5</h1>
+            </div>
+            <div id="6" class="flex gap-2 btn border-2 border-[#422AD5] text-[#422AD5]" onclick="lesson1(6)">
+                <i class="fa-solid fa-book-open"></i>
+                <h1>Lesson-6</h1>
+            </div>
+            <div id="7" class="flex gap-2 btn border-2 border-[#422AD5] text-[#422AD5]" onclick="lesson1(7)">
+                <i class="fa-solid fa-book-open"></i>
+                <h1>Lesson-7</h1>
+            </div>
+        </div>
+        <!-- Loader -->
+        <div id="loader" class="text-center hidden"><span class="loading loading-dots loading-xl"></span></div>
+        <div id="noText" class="flex flex-col items-center justify-center gap-5 py-36 bg-gray-200 mt-10">
+            <h1 class="text-center mb-5">আপনি এখনো কোন Lesson Select করেন ন</h1>
+            <h1 class="text-center text-2xl md:text-5xl">একটি Lesson Select করুন।</h1>
+        </div>
+        <div id="learn" class="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-6 gap-5 p-7 bg-gray-200 mt-10">
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="FAQ" class="w-11/12 mx-auto py-32 flex flex-col gap-2">
+        <h1 class="text-4xl text-center font-extrabold mb-10"><span class="text-[#00BCFF]">Frequently</span> Asked
+            Questions</h1>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title font-semibold">1. The difference between var, let, and const</div>
+            <div class="collapse-content text-sm">Use const by default for variables that won’t change. <br>
+
+                Use let for variables that need to be reassigned. <br>
+
+                Avoid var in modern JavaScript to prevent scope-related issues.
+
+            </div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">2. The difference between map(), forEach(), and filter()</div>
+            <div class="collapse-content text-sm">Use map() when you need a new array with transformed values. <br>
+
+                Use forEach() when you want to perform an action for each element without creating a new array. <br>
+
+                Use filter() when you need a new array containing only elements that meet a specific condition.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">3. Explain arrow functions and how they are different from regular
+                functions</div>
+            <div class="collapse-content text-sm">1. This Binding: <br>
+
+                Regular functions: this depends on how the function is called. <br>
+
+                Arrow functions: this is inherited from the surrounding scope (lexical this). <br>
+
+                2. Arguments Object: <br>
+
+                Regular functions: Have their own arguments object. <br>
+
+                Arrow functions: Do not have arguments; use rest parameters (...args) instead. <br>
+
+                3. Constructor Usage: <br>
+
+                Regular functions: Can be used as constructors with new. <br>
+
+                Arrow functions: Cannot be used as constructors. <br>
+
+                4. Syntax: <br>
+
+                Arrow functions are shorter and more concise, especially for single-expression functions.
+            </div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">4. How JavaScript Promises work?</div>
+            <div class="collapse-content text-sm">A Promise in JavaScript represents the eventual completion (or
+                failure) of an asynchronous operation and its resulting value. It is a way to handle asynchronous code
+                more cleanly and avoid "callback hell."
+            </div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">5. How closures work in JavaScript?</div>
+            <div class="collapse-content text-sm">A closure is a function that retains access to its lexical scope
+                (variables from its outer function) even after the outer function has finished executing. This allows
+                the inner function to "remember" and access those variables.
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+
+    <footer class="py-24 bg-gray-100">
+        <div class="w-11/12 mx-auto flex flex-col md:flex-row gap-10 md:gap-0 md:justify-between md:items-end">
+            <div class="flex flex-col gap-3">
+                <div class="logo flex gap-1 items-center">
+                    <h1 class="text-xl font-bold">English</h1>
+                    <img src="assets/logo.png" alt="">
+                    <h1 class="font-bold text-xl">জানালা</h1>
+                </div>
+                <h1 class="font-bold">ইংরেজি শিখুন সহজে</h1>
+                <p class="text-sm">Providing ED-Tech Applications since 2025</p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <p class="text-gray-500">Follow us</p>
+                <div class="flex gap-2">
+                    <img src="assets/fb-thumb.png" alt="">
+                    <img src="assets/youtube-thumb.png" alt="">
+                    <img src="assets/instagram-thumb.png" alt="">
+                    <img src="assets/github-thumb.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
