@@ -141,8 +141,9 @@ function login() {
   let username = document.getElementById("username").value;
   let pin = document.getElementById("pin").value;
 
-  if (typeof(username) == "string") {
+  if (username.length != 0) {
     if (pin == 123456) {
+        alert("Success!");
       hero.style.display = "none";
       header.style.display = "flex";
       learnSec.style.display = "flex";
@@ -151,7 +152,7 @@ function login() {
         alert("Enter correct pin number");
     }
   }else{
-    alert("Enter name in string not in number");
+    alert("Enter valid Name");
   }
 }
 

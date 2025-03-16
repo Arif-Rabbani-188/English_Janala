@@ -59,10 +59,10 @@
             <h1 class="text-xl font-bold">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা
                 বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</h1>
             <div class="flex flex-col items-center md:items-start md:w-1/2 gap-5">
-                <input id="username" class="border-gray-300 py-2 px-3 rounded-lg" type="text" placeholder="Enter Your Name">
+                <input id="username" class="border-gray-300 py-2 px-3 rounded-lg" type="text" name="name" placeholder="Enter Your Name">
                 <input id="pin" class="border-gray-300 py-2 px-3 rounded-lg" type="password" name=""
                     placeholder="Enter Your 6 Digit Pin">
-                <button class="btn w-36 bg-[#422AD5] text-white rounded-lg" onclick="login()">Get Started</button>
+                <button class="btn w-36 bg-[#422AD5] text-white rounded-lg" inputmode="numeric" onclick="login()">Get Started</button>
             </div>
         </div>
         <div>
@@ -208,11 +208,11 @@
             </div>
             <div class="flex flex-col gap-2">
                 <p class="text-gray-500">Follow us</p>
-                <div class="flex gap-2">
-                    <img src="assets/fb-thumb.png" alt="">
-                    <img src="assets/youtube-thumb.png" alt="">
-                    <img src="assets/instagram-thumb.png" alt="">
-                    <img src="assets/github-thumb.png" alt="">
+                <div class="flex gap-3 items-center">
+                    <a href=""><img src="assets/fb-thumb.png" alt=""></a>
+                    <a href=""><img src="assets/youtube-thumb.png" alt=""></a>
+                    <a href=""><img src="assets/instagram-thumb.png" alt=""></a>
+                    <a href=""><img src="assets/github-thumb.png" alt=""></a>
                 </div>
             </div>
         </div>
